@@ -23,7 +23,8 @@
             padding: 25px;
             border-radius: 20px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
         }
         .display {
             width: 100%;
@@ -66,6 +67,7 @@
         .row {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
         .button-clear {
             background: linear-gradient(145deg, #FF3D3D, #FF6F6F);
@@ -78,6 +80,34 @@
         }
         .button-equal:hover {
             background: linear-gradient(145deg, #66BB6A, #388E3C);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            .calculator {
+                padding: 15px;
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .display {
+                font-size: 1.8rem;
+                height: 60px;
+            }
+
+            .button {
+                width: 70px;
+                height: 70px;
+                font-size: 1.2rem;
+            }
+
+            .button-clear, .button-equal {
+                width: 90px;
+            }
+
+            .row {
+                justify-content: space-around;
+            }
         }
     </style>
 </head>
